@@ -1,5 +1,6 @@
 package com.gestiongarage.tp_gestion_garage.GestionReparation.DAO.entity;
 
+import com.gestiongarage.tp_gestion_garage.GestionStockPieceRechange.DAO.entity.Fournisseur;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
@@ -26,7 +27,6 @@ public class PieceRechange {
     private String nom;
 
     private String description;
-
     private String marque;
     private String modele;
 
@@ -38,7 +38,9 @@ public class PieceRechange {
 
     private String emplacement;
 
-    private Long fournisseurId;
+    @ManyToOne
+    @JoinColumn(name = "fournisseur_id")
+    private Fournisseur fournisseur;
 
     @CreationTimestamp
     private LocalDateTime dateCreation;

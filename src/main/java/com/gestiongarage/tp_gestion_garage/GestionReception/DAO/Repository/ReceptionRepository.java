@@ -13,4 +13,5 @@ public interface ReceptionRepository extends JpaRepository<Reception, Long> {
     boolean existsByVehiculeIdAndStatutNot(Long vehiculeId, StatutReception statutExclu); // pour vérifier dossier actif
     Reception findByNumeroDossier(String numeroDossier);
     long countByNumeroDossierStartingWith(String prefix);
+
 }

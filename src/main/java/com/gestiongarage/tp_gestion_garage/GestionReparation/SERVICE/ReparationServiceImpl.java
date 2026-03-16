@@ -3,6 +3,7 @@ package com.gestiongarage.tp_gestion_garage.GestionReparation.SERVICE;
 import com.gestiongarage.tp_gestion_garage.GestionAffectMec.DAO.Repository.MecanicienRepository;
 import com.gestiongarage.tp_gestion_garage.GestionAffectMec.DAO.entity.Mecanicien;
 import com.gestiongarage.tp_gestion_garage.GestionConsultationEtPanne.DAO.PanneDetectee;
+import com.gestiongarage.tp_gestion_garage.GestionConsultationEtPanne.DAO.Repository.PanneDetecteeRepository;
 import com.gestiongarage.tp_gestion_garage.GestionReception.DAO.Repository.ReceptionRepository;
 import com.gestiongarage.tp_gestion_garage.GestionReception.DAO.entity.Reception;
 import com.gestiongarage.tp_gestion_garage.GestionReception.enums.StatutReception;
@@ -89,7 +90,7 @@ public class ReparationServiceImpl implements ReparationService {
 
     @Override
     @Transactional
-    public ReparationDTO ajouterOperation(Long reparationId, com.garage.reception.dto.OperationReparationRequest request) {
+    public ReparationDTO ajouterOperation(Long reparationId, OperationReparationRequest request) {
         Reparation reparation = reparationRepository.findById(reparationId)
                 .orElseThrow(() -> new RuntimeException("Réparation non trouvée"));
 

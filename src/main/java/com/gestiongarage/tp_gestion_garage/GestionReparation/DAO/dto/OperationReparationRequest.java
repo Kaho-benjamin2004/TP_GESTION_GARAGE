@@ -1,4 +1,4 @@
-package com.garage.reception.dto;
+package com.gestiongarage.tp_gestion_garage.GestionReparation.DAO.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

@@ -1,9 +1,6 @@
 package com.gestiongarage.tp_gestion_garage.GestionReparation.CONTROLLER;
 
-import com.gestiongarage.tp_gestion_garage.GestionReparation.DAO.dto.BesoinOutillageRequest;
-import com.gestiongarage.tp_gestion_garage.GestionReparation.DAO.dto.BesoinPieceRequest;
-import com.gestiongarage.tp_gestion_garage.GestionReparation.DAO.dto.ReparationDTO;
-import com.gestiongarage.tp_gestion_garage.GestionReparation.DAO.dto.ReparationRequest;
+import com.gestiongarage.tp_gestion_garage.GestionReparation.DAO.dto.*;
 import com.gestiongarage.tp_gestion_garage.GestionReparation.SERVICE.ReparationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -44,7 +41,7 @@ public class ReparationController {
     @PostMapping("/{reparationId}/operations")
     public ResponseEntity<ReparationDTO> addOperation(
             @PathVariable Long reparationId,
-            @Valid @RequestBody com.garage.reception.dto.OperationReparationRequest request) {
+            @Valid @RequestBody OperationReparationRequest request) {
         return ResponseEntity.ok(reparationService.ajouterOperation(reparationId, request));
     }
 
