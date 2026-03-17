@@ -2,11 +2,12 @@ package com.gestiongarage.tp_gestion_garage.GestionAffectMec.DAO.entity;
 
 import com.gestiongarage.tp_gestion_garage.GestionReception.DAO.entity.Reception;
 import jakarta.persistence.*;
+import jdk.jshell.Snippet;
 import lombok.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "affectations_mecano")
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -28,6 +29,6 @@ public class AffectationMecano {
     private LocalDateTime dateFin;
 
     private Integer tempsPasse; // en minutes
-
+//     private statuss statutEnCours;
     private String description;
 }

@@ -14,4 +14,5 @@ public interface PieceRechangeRepository extends JpaRepository<PieceRechange, Lo
 
     @Query("SELECT p FROM PieceRechange p WHERE p.stock <= p.seuilAlerte")
     List<PieceRechange> findEnAlerte();
+    long countByStockLessThanEqual(int seuil);
 }

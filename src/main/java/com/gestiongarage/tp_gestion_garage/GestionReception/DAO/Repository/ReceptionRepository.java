@@ -14,4 +14,5 @@ public interface ReceptionRepository extends JpaRepository<Reception, Long> {
     Reception findByNumeroDossier(String numeroDossier);
     long countByNumeroDossierStartingWith(String prefix);
 
+    long countByStatut(StatutReception statutReception);
 }
